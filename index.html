@@ -492,7 +492,7 @@
 
   /* faixa de texto correndo */
   .marquee {
-    margin-inline: calc(50% - 50vw);
+    margin-inline: calc(50% - 50vw - 80px);
     margin-top: 48px;
     padding: 12px 0;
     overflow: hidden;
@@ -501,8 +501,8 @@
     transform: rotate(-2deg);
   }
   .marquee.alt { transform: rotate(1.5deg); background: var(--cream); color: #24331f; border-color: var(--cream); }
-  .marquee .track { display: flex; width: max-content; animation: run 32s linear infinite; }
-  .marquee.alt .track { animation-direction: reverse; animation-duration: 26s; }
+  .marquee .track { display: flex; width: max-content; animation: run 150s linear infinite; }
+  .marquee.alt .track { animation-direction: reverse; animation-duration: 120s; }
   .marquee span {
     white-space: nowrap; padding-right: 0;
     font-weight: 700; font-size: 15px; letter-spacing: .32em; text-transform: uppercase;
@@ -553,7 +553,7 @@
     .tema-img, .lead, blockquote, .ref-img, .prog-img, .night, .address, .buttons, .almoco, .final-img, .final > p {
       animation: reveal linear both;
       animation-timeline: view();
-      animation-range: entry 0% cover 28%;
+      animation-range: entry 0% entry 85%;
     }
     .nights::before {
       animation: grow linear both;
@@ -583,6 +583,12 @@
     blockquote { font-size: 23px; }
     .buttons { grid-template-columns: 1fr 1fr; }
     .buttons .btn-solid { grid-column: 1 / -1; }
+    .buttons .btn { white-space: nowrap; }
+  }
+  @media (min-width: 1100px) {
+    .wrap { max-width: 680px; }
+    .lead { font-size: 18px; }
+    blockquote { font-size: 25px; }
   }
 </style>
 </head>
@@ -630,8 +636,8 @@
 
     <div class="marquee" aria-hidden="true">
       <div class="track">
-        <span>De geração em geração <i>✦</i> Ser e Fazer <i>✦</i> IBB 54 anos <i>✦</i> 1972 a 2026 <i>✦</i> </span>
-        <span>De geração em geração <i>✦</i> Ser e Fazer <i>✦</i> IBB 54 anos <i>✦</i> 1972 a 2026 <i>✦</i> </span>
+        <span>De geração em geração <i>✦</i> Ser e Fazer <i>✦</i> IBB 54 anos <i>✦</i> 1972 a 2026 <i>✦</i> De geração em geração <i>✦</i> Ser e Fazer <i>✦</i> IBB 54 anos <i>✦</i> 1972 a 2026 <i>✦</i> De geração em geração <i>✦</i> Ser e Fazer <i>✦</i> IBB 54 anos <i>✦</i> 1972 a 2026 <i>✦</i> De geração em geração <i>✦</i> Ser e Fazer <i>✦</i> IBB 54 anos <i>✦</i> 1972 a 2026 <i>✦</i> De geração em geração <i>✦</i> Ser e Fazer <i>✦</i> IBB 54 anos <i>✦</i> 1972 a 2026 <i>✦</i> </span>
+        <span>De geração em geração <i>✦</i> Ser e Fazer <i>✦</i> IBB 54 anos <i>✦</i> 1972 a 2026 <i>✦</i> De geração em geração <i>✦</i> Ser e Fazer <i>✦</i> IBB 54 anos <i>✦</i> 1972 a 2026 <i>✦</i> De geração em geração <i>✦</i> Ser e Fazer <i>✦</i> IBB 54 anos <i>✦</i> 1972 a 2026 <i>✦</i> De geração em geração <i>✦</i> Ser e Fazer <i>✦</i> IBB 54 anos <i>✦</i> 1972 a 2026 <i>✦</i> De geração em geração <i>✦</i> Ser e Fazer <i>✦</i> IBB 54 anos <i>✦</i> 1972 a 2026 <i>✦</i> </span>
       </div>
     </div>
 
@@ -732,8 +738,8 @@
 
     <div class="marquee alt" aria-hidden="true">
       <div class="track">
-        <span>Receber <i>✦</i> Viver <i>✦</i> Transmitir <i>✦</i> Multiplicar <i>✦</i> </span>
-        <span>Receber <i>✦</i> Viver <i>✦</i> Transmitir <i>✦</i> Multiplicar <i>✦</i> </span>
+        <span>Receber <i>✦</i> Viver <i>✦</i> Transmitir <i>✦</i> Multiplicar <i>✦</i> Receber <i>✦</i> Viver <i>✦</i> Transmitir <i>✦</i> Multiplicar <i>✦</i> Receber <i>✦</i> Viver <i>✦</i> Transmitir <i>✦</i> Multiplicar <i>✦</i> Receber <i>✦</i> Viver <i>✦</i> Transmitir <i>✦</i> Multiplicar <i>✦</i> Receber <i>✦</i> Viver <i>✦</i> Transmitir <i>✦</i> Multiplicar <i>✦</i> </span>
+        <span>Receber <i>✦</i> Viver <i>✦</i> Transmitir <i>✦</i> Multiplicar <i>✦</i> Receber <i>✦</i> Viver <i>✦</i> Transmitir <i>✦</i> Multiplicar <i>✦</i> Receber <i>✦</i> Viver <i>✦</i> Transmitir <i>✦</i> Multiplicar <i>✦</i> Receber <i>✦</i> Viver <i>✦</i> Transmitir <i>✦</i> Multiplicar <i>✦</i> Receber <i>✦</i> Viver <i>✦</i> Transmitir <i>✦</i> Multiplicar <i>✦</i> </span>
       </div>
     </div>
 

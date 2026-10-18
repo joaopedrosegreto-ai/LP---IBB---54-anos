@@ -69,13 +69,17 @@ function garantirResumo() {
   if (planilha.getSheetByName("Resumo")) return;
   const r = planilha.insertSheet("Resumo");
   const a = "'" + ABA + "'!";
-  r.getRange("A1:B6").setValues([
-    ["Resumo das inscrições", ""],
-    ["Total de inscrições", "=MAX(0,COUNTA(" + a + "B:B)-1)"],
-    ["Vão ao almoço", "=COUNTIF(" + a + "E:E,\"Sim\")"],
-    ["Não vão", "=COUNTIF(" + a + "E:E,\"Não\")"],
-    ["Da igreja", "=COUNTIF(" + a + "C:C,\"Membro da igreja\")"],
-    ["Visitantes", "=COUNTIF(" + a + "C:C,\"Visitante\")"]
+  r.getRange("A1:A6").setValues([
+    ["Resumo das inscrições"], ["Total de inscrições"], ["Vão ao almoço"],
+    ["Não vão"], ["Da igreja"], ["Visitantes"]
+  ]);
+  // setFormulas usa sempre nomes em inglês e vírgula, em qualquer idioma da planilha
+  r.getRange("B2:B6").setFormulas([
+    ["=MAX(0,COUNTA(" + a + "B:B)-1)"],
+    ["=COUNTIF(" + a + "E:E,\"Sim\")"],
+    ["=COUNTIF(" + a + "E:E,\"Não\")"],
+    ["=COUNTIF(" + a + "C:C,\"Membro da igreja\")"],
+    ["=COUNTIF(" + a + "C:C,\"Visitante\")"]
   ]);
   r.getRange("A1").setFontWeight("bold").setFontSize(13);
   r.getRange("A2:A6").setFontWeight("bold");
