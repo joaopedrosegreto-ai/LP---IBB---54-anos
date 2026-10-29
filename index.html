@@ -129,7 +129,16 @@
   .almoco p { color: var(--muted); font-size: 16px; margin-top: 8px; }
   .almoco .btn { margin-top: 18px; font-size: 18px; min-height: 62px; width: 100%; }
 
-  .almoco .contato-num { margin-top: 10px; font-weight: 700; letter-spacing: .04em; opacity: .85; }
+  .almoco { position: relative; overflow: hidden; padding-top: 84px; }
+  .faixa-encerrada {
+    position: absolute; top: 18px; left: -12%; right: -12%;
+    padding: 9px 0; transform: rotate(-3deg);
+    background: #c8372d; color: #fff; border-block: 2px solid rgba(255, 255, 255, .35);
+    font-weight: 700; font-size: 14px; letter-spacing: .28em; text-transform: uppercase;
+    text-align: center; box-shadow: 0 6px 18px rgba(0, 0, 0, .25);
+  }
+  .almoco .encerrado { color: var(--cream); font-weight: 700; font-size: 18px; margin-top: 14px; }
+  .mini.off { background: transparent; color: var(--cream); border-color: rgba(238, 233, 220, .5); cursor: default; }
   /* pop-up de inscrição: fácil de ler, botões grandes */
   .modal {
     position: fixed;
@@ -728,7 +737,7 @@
               <li>
                 <time>12h</time>
                 <span>Almoço de aniversário
-                  <a class="mini" href="https://wa.me/5531988880660?text=Ol%C3%A1%2C%20Pastor%20Jo%C3%A3o%20Batista!%20Tenho%20uma%20d%C3%BAvida%20sobre%20a%20Confer%C3%AAncia%20IBB%2054%20anos." target="_blank" rel="noopener">Dúvidas? Fale com o Pastor</a>
+                  <span class="mini off">Inscrições encerradas</span>
                 </span>
               </li>
               <li>
@@ -785,17 +794,18 @@
       <p>Celebre conosco os 54 anos da nossa igreja. Te esperamos! 💚</p>
 
       <div class="almoco">
+        <div class="faixa-encerrada" role="status">Inscrições encerradas</div>
         <h2>Almoço de aniversário da Betel</h2>
         <div class="info" aria-label="Quando e onde">
           <span>Domingo, 01/11</span><span>Às 12h</span><span>Aqui na igreja</span>
         </div>
         <p>Depois do batismo, vamos almoçar juntos para celebrar os 54 anos da nossa igreja. Membros, visitantes e famílias são bem-vindos.</p>
-        <p>As inscrições para o almoço estão encerradas. Ficou com alguma dúvida? Fale direto com o Pastor João Batista pelo WhatsApp.</p>
-        <a class="btn btn-solid" href="https://wa.me/5531988880660?text=Ol%C3%A1%2C%20Pastor%20Jo%C3%A3o%20Batista!%20Tenho%20uma%20d%C3%BAvida%20sobre%20a%20Confer%C3%AAncia%20IBB%2054%20anos." target="_blank" rel="noopener">
+        <p class="encerrado">As inscrições para o almoço foram encerradas.</p>
+        <p>Obrigado a todos que se inscreveram! Te esperamos no domingo.</p>
+        <a class="btn btn-line" href="https://wa.me/5531988880660?text=Ol%C3%A1%2C%20Pastor%20Jo%C3%A3o%20Batista!%20Tenho%20uma%20d%C3%BAvida%20sobre%20a%20Confer%C3%AAncia%20IBB%2054%20anos." target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.6.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg>
-          Falar com o Pastor João Batista
+          Dúvidas? Fale com o Pastor
         </a>
-        <p class="contato-num">(31) 98888-0660</p>
       </div>
 
       <div class="buttons">
